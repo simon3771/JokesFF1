@@ -1,6 +1,7 @@
 import React from 'react';
 import axios from 'axios';
 import './css/Jokes.css';
+import Form from './Form';
 
 class Jokes extends React.Component {
   constructor(){
@@ -33,6 +34,9 @@ class Jokes extends React.Component {
 
     return(
       <div className = "textStuff">
+        <div>
+          <Form />
+        </div>
         <button onClick={this.activateLasers}>
           Activate Lasers
         </button>
