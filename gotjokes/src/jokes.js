@@ -1,40 +1,59 @@
 import React from 'react';
 import axios from 'axios';
+import './css/Jokes.css';
 
 class Jokes extends React.Component {
   constructor(){
     super()
     this.state = {
-      joke: []
+      joke: [],
+      show: "show",
+      hidden: "hidden"
     };
     this.activateLasers = this.activateLasers.bind(this);
+
   }
 
-
-  componentDidMount() {
-
-   }
-
   activateLasers(){
-    console.log(this);
-     axios.get(`https://08ad1pao69.execute-api.us-east-1.amazonaws.com/dev/random_joke`)
+     axios.get(`https://08ad1pao69.execute-api.us-east-1.amazonaws.com/dev/random_ten`)
        .then((res) => {
-         const joke = res.data;
-         console.log(this)
-         this.setState( {joke} );
+         let joke = res.data;
          console.log(joke)
+         this.setState( {joke} );
+         this.setState({show: "show", hidden: "hidden"})
        })
    }
 
+  toggleJoke() {
+    this.setState({show: "hidden", hidden: "show"})
+  }
+
+
   render(){
+
     return(
       <div className = "textStuff">
         <button onClick={this.activateLasers}>
           Activate Lasers
         </button>
         <ul>
-          <li>{this.state.joke.setup}</li>
-          <li>{this.state.joke.punchline}</li>
+          {
+            this.state.joke.map((el) =>
+            <div>
+              <li
+                onClick={this.toggleJoke.bind(this)}
+                className={this.state.show}
+                key={el.id}>
+                {el.setup}
+              </li>
+              <li
+                onClick={this.toggleJoke.bind(this)}
+                key={el.id}
+                className={this.state.hidden}>
+                {el.punchline}
+              </li>
+            </div>
+          )}
         </ul>
     </div>
     )
