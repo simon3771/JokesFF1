@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
-import Jokes from './Jokes';
 import './App.css'
+import Form from './Form';
 
 
 class App extends Component {
@@ -10,7 +10,7 @@ class App extends Component {
     return (
       <div className = "page">
           <h1 className="App-title">Jokes</h1>
-          <Jokes />
+          <Form />
       </div>
     );
   }
