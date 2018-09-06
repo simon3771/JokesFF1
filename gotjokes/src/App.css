@@ -3,6 +3,7 @@
 html {
   box-sizing: border-box;
   font-size: 16px;
+  background-color: black;
 }
 
 *, *:before, *:after {
@@ -25,12 +26,6 @@ img {
 }
 
 /* -------------------------------------------------------------- */
-
-*{
-  background-color: black;
-  color: white;
-  font-family: helvetica;
-}
 
 .App {
   text-align: center;
@@ -59,8 +54,13 @@ img {
 .page {
   background-color: black;
   color: white;
+  font-family: helvetica;
   text-align: center;
-  padding: 20em;
+  padding: 10em;
+}
+
+.form-div {
+  padding-top: 30px;
 }
 
 .textStuff li, .textStuff {
@@ -68,9 +68,7 @@ img {
 
 }
 
-.textStuff li:hover{
-  color:blue;
-}
+
 
 /* ------------------------------------------- */
 
@@ -80,6 +78,19 @@ img {
 .alljokes{
   padding: 15px;
   margin: 20px;
+}
+
+.punchLine {
+  color: black;
+  display: block;
+}
+
+.punchLine:hover {
+  color: white;
+}
+
+.jokeDisplay {
+  height: 200px;
 }
 
 

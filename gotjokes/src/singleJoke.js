@@ -1,6 +1,19 @@
 import React from 'react';
 import axios from 'axios';
-import './App.css';
+import { withStyles } from '@material-ui/core/styles';
+// import { Button } from 'react-bootstrap';
+import Button from '@material-ui/core/Button';
+import './css/singleJoke.css'
+
+const styles = theme => ({
+  button: {
+    margin: theme.spacing.unit,
+  },
+  input: {
+    display: 'none',
+  },
+});
+
 
 class SingleJoke extends React.Component {
   constructor(){
@@ -8,6 +21,7 @@ class SingleJoke extends React.Component {
     this.state = {
       joke: []
     }
+    this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   componentDidMount(){
@@ -20,32 +34,53 @@ class SingleJoke extends React.Component {
       })
   }
 
+  handleSubmit(e){
+    e.preventDefault()
+    axios.get(`https://08ad1pao69.execute-api.us-east-1.amazonaws.com/dev/random_ten`)
+      .then((res) => {
+        let joke = res.data;
+        this.setState( {joke} );
+  })
+}
+
 moneyBagsFilter(){
   let type = this.props.money
-  console.log('yo xavi')
-  console.log(type);
-  return this.state.joke.map(j => {
-    if(type === j.type){
-     let something = <li key = {j.id}>{j.setup}<span>{j.punchline}</span></li>
-     return something
-  }
-  })
+  return this.state.joke.filter(j => {
+    return type === j.type}).map(j => {
+       let something =
+       <div>
+         <li key = {j.id}>{j.setup}</li>
+         <li className = "punchLine flash">{j.punchline}</li>
+       </div>
+       return something
+     })
+   }
+
+
+chooseOneJoke(){
+  let array = this.moneyBagsFilter()
+  // console.log(array.length)
+  let randNumb = Math.floor(Math.random() * array.length)
+  let oneJoke = array[randNumb]
+  // console.log(oneJoke)
+  return oneJoke
 }
 
   render(){
 
-
-
-
-
-
-
     return(
       <div className = "alljokes">
-        <ul id="jokes">{this.moneyBagsFilter()}</ul>
+        <div className = "jokeDisplay">
+          <ul id="jokes">{this.chooseOneJoke()}</ul>
+        </div>
+        <form onSubmit={this.handleSubmit}>
+        <Button type = "submit" id="red" variant="outlined"  className="button">
+          Activate Lasers
+        </Button>
+        </form>
       </div>
     )
   }
 }
 
-export default SingleJoke
+export default withStyles(styles)(SingleJoke);

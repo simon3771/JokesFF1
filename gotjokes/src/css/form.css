@@ -1,0 +1,14 @@
+.formDiv select{
+  background-color: black;
+  color: white;
+  font-family: helvetica;
+}
+
+#fancyButton{
+  color: white;
+}
+
+select#selectorSmall {
+  height: 30px;
+  outline: none;
+}

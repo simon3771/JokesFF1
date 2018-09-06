@@ -1,5 +1,9 @@
 import React from 'react';
-import SingleJoke from './singleJoke'
+import SingleJoke from './singleJoke';
+import './css/form.css';
+
+
+
 
 
 //The Form component lets the user select a joke type and extracts the value that was selected.
@@ -17,29 +21,30 @@ class Form extends React.Component {
   }
 
 // This method updates the state of the component to the value of the user-selected option in our form.
+
+  handleSubmit(event){
+    event.preventDefault()
+
+  }
+
   handleChange(event) {
     this.setState({value: event.target.value});
   }
 
 
-
-
   render(){
-
-
 
 
 //this section contains the values that are rendered to the DOM when calling an instance of the Form component.
     return(
-      <div>
-        <form>
-          <select value={this.state.value} onChange={this.handleChange}>
+      <div className = "formDiv">
+        <form onSubmit= {this.handlSubmit}>
+          <select id="selectorSmall" value={this.state.value} onChange={this.handleChange}>
             <option value = 'general'>general</option>
             <option value = 'knock-knock'>knock-knock</option>
             <option value = 'programming'>programming</option>
           </select>
         </form>
-        {console.log(this.state.value)}
         <SingleJoke money = {this.state.value} />
       </div>
     )
