@@ -1,0 +1,115 @@
+
+
+#red {
+  color: white;
+  border: 1px solid white;
+}
+
+.jokes li{
+  font-size: 3vw;
+
+}
+
+.jokeDisplay{
+  padding-bottom: 300px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#active li{
+  display: none;
+}
+
+#active{
+  background-color: #04c2f2;
+animation-name: laser;
+animation-duration: 0.1s;
+animation-timing-function: linear;
+animation-iteration-count: infinite;
+animation-direction: alternate;
+animation-play-state: running;
+  }
+
+
+  @keyframes laser {
+    from {background-color: #04c2f2;}
+    to {background-color: red;}
+}
+
+
+.flash:hover {
+   animation-name: flash;
+    animation-duration: 0.2s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-play-state: running;
+}
+
+@keyframes flash {
+    from {color: white;}
+    to {color: blue;}
+}
+
+h1.inactive{
+display:none;
+}
+
+h1.active{
+  font-size: 10em;
+  padding-top: 1em;
+}
+
+
+img.off{
+display: none ;
+margin: 0 15px;
+height: 20px;
+width: 20px;
+}
+
+img.arrowOn{
+  display: inline;
+  margin: 0 15px;
+  height: 20px;
+  width: 20px;
+  -webkit-filter: invert(100%);
+}
+
+#arrow1 {
+transform: rotate(.2turn);
+}
+
+#arrow2 {
+transform: rotate(.15turn);
+}
+
+#arrow3 {
+transform: rotate(.12turn);
+}
+
+#arrow4 {
+transform: rotate(.10turn);
+}
+
+#arrow5 {
+transform: rotate(.02turn);
+}
+
+#bottomForm{
+  padding-bottom: 200px;
+}
+
+
+@media screen and (min-width: 895px) {
+  .jokes li {
+    font-size: 50px;
+    padding-bottom: 2rem;
+  }
+}
+
+@media screen and (max-width: 895px) {
+  .jokeDisplay{
+    padding-bottom: 0;
+  }
+}

@@ -1,0 +1,31 @@
+.wynJokeContainer2{
+  padding: 0;
+  padding-top: 200px;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  height: 600px;
+}
+
+#donkey{
+  width: 400px;
+  height: 200px;
+  margin: 0 auto;
+}
+
+#creditText{
+  text-align: left;
+  width: 200px;
+  font-size: 20px;
+  padding: 10px;
+  font-family: helvetica;
+  line-height: 1.5;
+  color: grey;
+}
+
+@media screen and (max-width: 422px) {
+  #creditText{
+    text-align: center;
+    width: 100% ;
+  }
+}

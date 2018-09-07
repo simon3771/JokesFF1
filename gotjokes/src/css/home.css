@@ -1,0 +1,68 @@
+a {
+    color: #000;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.jokePageLink{
+  text-decoration: none;
+  text-align: center;
+  display: inline;
+}
+
+
+.row{
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  order: 0;
+  flex-wrap: wrap;
+}
+
+.wynJokeContainer h1{
+  font-family: helvetica;
+}
+
+.wynJokeContainer {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  list-style: none;
+  align-items: center;
+  justify-content: space-around;
+  justify-content: center;
+  height: 600px;
+  flex-direction: column;
+}
+
+.wynJoke {
+  background: tomato;
+  padding: 5px;
+  width: 600px;
+  height: 150px;
+  margin: 10px;
+  line-height: 150px;
+  color: white;
+  font-weight: bold;
+  font-size: 7vw;
+  text-align: center;
+  order: 1;
+
+}
+
+#browserDiv{
+text-align: center;
+order: 3;
+height: 50px;
+}
+
+#jokeLink{
+  color: white;
+  padding: 20px;
+}
+
+@media screen and (min-width: 795px) {
+  .wynJoke {
+    font-size: 3em;
+  }
+}

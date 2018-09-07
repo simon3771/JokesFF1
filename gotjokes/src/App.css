@@ -3,6 +3,7 @@
 html {
   box-sizing: border-box;
   font-size: 16px;
+  background-color: #04c2f2;
 }
 
 *, *:before, *:after {
@@ -25,12 +26,6 @@ img {
 }
 
 /* -------------------------------------------------------------- */
-
-*{
-  background-color: black;
-  color: white;
-  font-family: helvetica;
-}
 
 .App {
   text-align: center;
@@ -57,10 +52,17 @@ img {
 }
 
 .page {
-  background-color: black;
+  background-color: #04c2f2;
   color: white;
+  font-family: helvetica;
   text-align: center;
-  padding: 20em;
+  padding-top: 200px;
+  position: relative;
+
+}
+
+.form-div {
+width: 1000px;
 }
 
 .textStuff li, .textStuff {
@@ -68,11 +70,78 @@ img {
 
 }
 
-.textStuff li:hover{
-  color:blue;
+#leftSideText{
+  font-size: 24px;
+  font-family: 'Gamja Flower', cursive;
+  position: absolute;
+  top: -130px;
+  left: -100px;
+
+
+
 }
+
+
+
+/* ------------------------------------------- */
+
+.invert{
+    -webkit-filter: invert(100%);
+}
+
+
+.leftStuff{
+  display: inline;
+  position: relative;
+  float: left;
+  width: 25rem;
+}
+
+#arrow{
+  height: 100px;
+  width: 100px;
+  position: absolute;
+  right: 100px;
+  top: 0px;
+  transform:translate(0px, -160%) rotate(.9turn);
+
+}
+
+.leftStuff{
+
+}
+
+#jokes li{
+  padding: 10px;
+}
+.alljokes{
+  padding: 15px;
+  margin: 20px;
+}
+
+.punchLine {
+  color: #04c2f2;
+  display: block;
+}
+
+.punchLine:hover {
+  color: white;
+}
+
+.jokeDisplay {
+  height: 200px;
+  justify-content: space-around;
+}
+
 
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
+}
+
+@media screen and (max-width: 1080px) {
+  
+    .leftStuff{
+      display: none;
+    }
 }
