@@ -3,6 +3,7 @@ import axios from 'axios';
 import { withStyles } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
 import './css/singleJoke.css'
+import './img/white-arr.png'
 
 
 const styles = theme => ({
