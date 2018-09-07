@@ -56,11 +56,11 @@ img {
   color: white;
   font-family: helvetica;
   text-align: center;
-  padding: 10em;
+
 }
 
 .form-div {
-  padding-top: 30px;
+  padding-top: 100px;
 }
 
 .textStuff li, .textStuff {
@@ -68,9 +68,40 @@ img {
 
 }
 
+#leftSideText{
+  font-size: 24px;
+  float: left;
+  transform: translate(80px, -430%);
+  font-family: 'Gamja Flower', cursive;
+
+
+}
+
 
 
 /* ------------------------------------------- */
+
+.invert{
+    -webkit-filter: invert(100%);
+}
+
+
+.leftStuff{
+  position: relative;
+}
+
+#arrow{
+  height: 100px;
+  width: 100px;
+  position: absolute;
+  left: 300px;
+  top: 0px;
+  transform: translate(80px, -150%)rotate(.9turn);
+}
+
+.leftStuff{
+  display: block
+}
 
 #jokes li{
   padding: 10px;
