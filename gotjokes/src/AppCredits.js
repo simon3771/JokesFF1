@@ -2,12 +2,14 @@ import React, { Component } from 'react';
 import './App.css';
 import Form from './Form';
 import './img/arrow.png';
+import { BrowserRouter, Route, Link } from 'react-router-dom';
+import Credits from './Credits';
 
 
 
 
 // The App component is the main component of the application. The application's title, the Form component, and the Jokes component are both rendered inside of this component.
-class App extends Component {
+class AppCredits extends Component {
   render() {
     return (
       <div className = "page">
@@ -23,4 +25,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default AppCredits;
