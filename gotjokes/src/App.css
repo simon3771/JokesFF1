@@ -3,7 +3,7 @@
 html {
   box-sizing: border-box;
   font-size: 16px;
-  background-color: black;
+  background-color: #04c2f2;
 }
 
 *, *:before, *:after {
@@ -52,7 +52,7 @@ img {
 }
 
 .page {
-  background-color: black;
+  background-color: #04c2f2;
   color: white;
   font-family: helvetica;
   text-align: center;
@@ -112,7 +112,7 @@ img {
 }
 
 .punchLine {
-  color: black;
+  color: #04c2f2;
   display: block;
 }
 

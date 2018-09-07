@@ -1,5 +1,5 @@
 .formDiv select{
-  background-color: black;
+  background-color: #04c2f2;
   color: white;
   font-family: helvetica;
 }
@@ -10,5 +10,6 @@
 
 select#selectorSmall {
   height: 30px;
+  border: 1px solid;
   outline: none;
 }
