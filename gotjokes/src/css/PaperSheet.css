@@ -1,9 +1,8 @@
 .wynJokeContainer2{
   padding: 0;
   padding-top: 200px;
-  margin: 0;
   list-style: none;
-  align-items: center;
+  display: flex;
   justify-content: center;
   height: 600px;
 }
@@ -22,5 +21,11 @@
   font-family: helvetica;
   line-height: 1.5;
   color: grey;
+}
 
+@media screen and (max-width: 422px) {
+  #creditText{
+    text-align: center;
+    width: 100% ;
+  }
 }

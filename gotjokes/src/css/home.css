@@ -15,7 +15,8 @@ a {
   width: 100%;
   display: flex;
   justify-content: space-around;
-  margin-top: 200px;
+  order: 0;
+  flex-wrap: wrap;
 }
 
 .wynJokeContainer h1{
@@ -25,10 +26,13 @@ a {
 .wynJokeContainer {
   padding: 0;
   margin: 0;
+  display: flex;
   list-style: none;
   align-items: center;
+  justify-content: space-around;
   justify-content: center;
   height: 600px;
+  flex-direction: column;
 }
 
 .wynJoke {
@@ -40,15 +44,25 @@ a {
   line-height: 150px;
   color: white;
   font-weight: bold;
-  font-size: 3em;
+  font-size: 7vw;
   text-align: center;
+  order: 1;
+
 }
 
 #browserDiv{
 text-align: center;
+order: 3;
+height: 50px;
 }
 
 #jokeLink{
   color: white;
   padding: 20px;
+}
+
+@media screen and (min-width: 795px) {
+  .wynJoke {
+    font-size: 3em;
+  }
 }

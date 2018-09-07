@@ -56,11 +56,13 @@ img {
   color: white;
   font-family: helvetica;
   text-align: center;
+  padding-top: 200px;
+  position: relative;
 
 }
 
 .form-div {
-  padding-top: 200px;
+width: 1000px;
 }
 
 .textStuff li, .textStuff {
@@ -70,9 +72,11 @@ img {
 
 #leftSideText{
   font-size: 24px;
-  float: left;
-  transform: translate(80px, -430%);
   font-family: 'Gamja Flower', cursive;
+  position: absolute;
+  top: -130px;
+  left: -100px;
+
 
 
 }
@@ -87,20 +91,24 @@ img {
 
 
 .leftStuff{
+  display: inline;
   position: relative;
+  float: left;
+  width: 25rem;
 }
 
 #arrow{
   height: 100px;
   width: 100px;
   position: absolute;
-  left: 300px;
+  right: 100px;
   top: 0px;
-  transform: translate(80px, -150%)rotate(.9turn);
+  transform:translate(0px, -160%) rotate(.9turn);
+
 }
 
 .leftStuff{
-  display: block
+
 }
 
 #jokes li{
@@ -122,10 +130,18 @@ img {
 
 .jokeDisplay {
   height: 200px;
+  justify-content: space-around;
 }
 
 
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
+}
+
+@media screen and (max-width: 1080px) {
+  
+    .leftStuff{
+      display: none;
+    }
 }

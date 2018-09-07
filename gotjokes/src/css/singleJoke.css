@@ -6,12 +6,18 @@
 }
 
 .jokes li{
-  font-size: 50px;
-  padding-bottom: 2rem;
+  font-size: 3vw;
+
 }
 
 .jokeDisplay{
   padding-bottom: 300px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#active li{
+  display: none;
 }
 
 #active{
@@ -24,9 +30,6 @@ animation-direction: alternate;
 animation-play-state: running;
   }
 
-  #active li{
-    display: none;
-  }
 
   @keyframes laser {
     from {background-color: #04c2f2;}
@@ -95,4 +98,18 @@ transform: rotate(.02turn);
 
 #bottomForm{
   padding-bottom: 200px;
+}
+
+
+@media screen and (min-width: 895px) {
+  .jokes li {
+    font-size: 50px;
+    padding-bottom: 2rem;
+  }
+}
+
+@media screen and (max-width: 895px) {
+  .jokeDisplay{
+    padding-bottom: 0;
+  }
 }
