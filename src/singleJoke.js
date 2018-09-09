@@ -94,27 +94,49 @@ makeArrows(){
   render(){
 
     return(
-      <div id = {this.state.laserStatus}>
-        <div className = "alljokes">
-          <div>
-            <h1 className = {this.state.laserStatus}>GET REKT BRO</h1>
+
+
+
+
+
+
+//This div encompasses the entire page itself.
+      <div className = "entireJokePage">
+{/*This div encompasses the Joke display section as well as the hidden message. */}
+          <div className = "jokeView" id= {this.state.laserStatus} >
+            <div>
+              <h1 className = {this.state.laserStatus}>GET REKT BRO</h1>
+            </div>
+            <div className = "jokeDisplay">
+              <ul className="jokes">{this.chooseOneJoke()}</ul>
+            </div>
           </div>
-          <div className = "jokeDisplay">
-            <ul className="jokes">{this.chooseOneJoke()}</ul>
-          </div>
-          <form onSubmit={this.handleSubmit}>
-          <Button type = "submit" id="red" variant="outlined"  className="button">
-            {this.state.buttonText}
-          </Button>
-          </form>
-        </div>
-        <div className = "arrows">
+
+
+
+
+{/*This div encompasses the Get New Jokes button and the disappearing arrows that follow*/}
+          <div className = "buttonAndArrowsTogether">
+            <div className = "getJokesButton">
+              <form onSubmit={this.handleSubmit}>
+                <Button type = "submit" id="red" variant="outlined"  className="button">
+                  {this.state.buttonText}
+                </Button>
+              </form>
+            </div>
+            <div className = "arrows">
           <img className ={this.state.arrows} id="arrow1" src="/static/media/white-arr.5270f056.png" alt="arrow"/>
           <img className ={this.state.arrows} id="arrow2" src="/static/media/white-arr.5270f056.png" alt="arrow" />
           <img className ={this.state.arrows} id="arrow3" src="/static/media/white-arr.5270f056.png" alt="arrow" />
           <img className ={this.state.arrows} id="arrow4" src="/static/media/white-arr.5270f056.png" alt="arrow" />
           <img className ={this.state.arrows} id="arrow5" src="/static/media/white-arr.5270f056.png" alt="arrow" />
         </div>
+          </div>
+
+
+
+
+
       </div>
     )
   }
