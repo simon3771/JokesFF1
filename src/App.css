@@ -56,13 +56,17 @@ img {
   color: white;
   font-family: helvetica;
   text-align: center;
-  padding-top: 200px;
+  padding-top: 60px;
   position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 
 }
 
 .form-div {
-width: 1000px;
+width: 100%;
 }
 
 .textStuff li, .textStuff {
@@ -140,7 +144,7 @@ width: 1000px;
 }
 
 @media screen and (max-width: 1080px) {
-  
+
     .leftStuff{
       display: none;
     }
