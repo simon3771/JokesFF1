@@ -1,4 +1,29 @@
+.entireJokePage{
+  display: flex;
+  flex-direction: column;
+  margin-top: 2rem;
+}
 
+.alljokes{
+
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.buttonAndArrowsTogether{
+  position: fixed;
+  align-items: center;
+      bottom: 3rem;
+      width: 100%
+}
+
+.jokeView{
+  width: 75%;
+  display: flex;
+  margin: 0 auto;
+  align-items: center;
+}
 
 #red {
   color: white;
@@ -6,15 +31,15 @@
 }
 
 .jokes li{
-  font-size: 3vw;
+  font-size: 50px;
 
 }
 
-.jokeDisplay{
+/* .jokeDisplay{
   padding-bottom: 300px;
   display: flex;
   flex-wrap: wrap;
-}
+} */
 
 #active li{
   display: none;
@@ -56,8 +81,8 @@ display:none;
 }
 
 h1.active{
-  font-size: 10em;
-  padding-top: 1em;
+  font-size: 5em;
+  padding-top: ;
 }
 
 
@@ -101,10 +126,9 @@ transform: rotate(.02turn);
 }
 
 
-@media screen and (min-width: 895px) {
+@media screen and (max-width: 895px) {
   .jokes li {
-    font-size: 50px;
-    padding-bottom: 2rem;
+    font-size: 7vw;
   }
 }
 

@@ -14,10 +14,11 @@ class App extends Component {
         <div className = "form-div">
           <Form />
         </div>
-        <div className="leftStuff">
+      {/*  <div className="leftStuff">
           <h1 id="leftSideText">Go here to get the punchline!</h1>
           <img className="invert" id="arrow" src= "/static/media/arrow.d21bae52.png" alt="arrow" />
         </div>
+        */ }
       </div>
     );
   }
