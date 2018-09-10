@@ -5,6 +5,7 @@
   "dependencies": {
     "@material-ui/core": "^3.0.2",
     "axios": "^0.18.0",
+    "material-ui": "^1.0.0-beta.47",
     "prop-types": "^15.6.2",
     "react": "^16.4.2",
     "react-bootstrap": "^0.32.4",
