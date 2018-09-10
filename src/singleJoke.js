@@ -24,18 +24,19 @@ class SingleJoke extends React.Component {
       laserStatus: 'inactive',
       buttonText: 'Get New Joke',
       arrows: 'off',
-      punchLine: 'punchLineOff'
+      punchLine: 'punchLineOff',
+      jokingTest: []
     }
     this.handleSubmit = this.handleSubmit.bind(this);
-    this.test = this.test.bind(this)
+    this.showPunch = this.showPunch.bind(this)
   }
 
-test(e){
-  console.log(e)
-  e.stopPropagation();
-  console.log(e)
-  this.setState({punchLine: 'punchLineOn'})
-  console.log(this.state.punchLine)
+showPunch(e){
+  console.log('Show punch xxx', e)
+
+  //this.setState({punchLine: 'punchLineOff'})
+  //this.setState({punchLine: undefined})
+  //console.log(this.state.punchLine)
 }
 
   componentDidMount(){
@@ -48,13 +49,14 @@ test(e){
 
 
   handleSubmit(e){
+    console.log('handle submit called')
     e.preventDefault()
     axios.get(`https://08ad1pao69.execute-api.us-east-1.amazonaws.com/dev/random_ten`)
       .then((res) => {
         let joke = res.data;
         this.setState( { activateLasers: this.state.activateLasers + 1, joke, punchLine: 'punchLineOff'} )
-        console.log(this.state.activateLasers)
-        console.log(this.state.punchLine)
+        //console.log(this.state.activateLasers)
+        //console.log(this.state.punchLine)
         if((this.state.activateLasers +1) % 5 === 0){
           this.setState( {buttonText: 'Activate Lasers', arrows: 'arrowOn'} )
         }
@@ -69,12 +71,9 @@ test(e){
 }
 
 
-
-
-
-
 moneyBagsFilter(){
-  let type = this.props.money
+  console.log('moneyBagsFilter called')
+  let type = 'general'
   return this.state.joke.filter(j => {
     return type === j.type}).map(j => {
        let something =
@@ -117,6 +116,7 @@ makeArrows(){
 
 //This div encompasses the entire page itself.
       <div className = "entireJokePage">
+        {console.log('rendered singlejoke to page')}
 {/*This div encompasses the Joke display section as well as the hidden message. */}
           <div className = "jokeView" id= {this.state.laserStatus} >
             <div>
@@ -135,7 +135,7 @@ makeArrows(){
 
             <div className = "getJokesButton">
               <div>
-            <Button type = "button" id="blue" variant="outlined"  className="button">
+            <Button onClick={(ev) => {this.showPunch(ev); ev.stopPropagation();}} type = "button" id="blue" variant="outlined"  className="button">
                   <span role="img" id="fist" aria-label="fist">👊🏼</span>
                 </Button>
               </div>

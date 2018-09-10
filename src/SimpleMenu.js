@@ -18,7 +18,7 @@ class SimpleMenu extends React.Component {
 
   handleClose = (event) => {
     let typo = event.target.value
-    let type;
+    let type = 'general'
     switch (typo) {
     case 1:
       type = 'general';
