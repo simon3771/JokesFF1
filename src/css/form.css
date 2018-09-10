@@ -13,3 +13,7 @@ select#selectorSmall {
   border: 1px solid;
   outline: none;
 }
+
+#niceButtonText{
+  color:white;
+}

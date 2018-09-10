@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import './App.css';
-import Form from './Form';
+// import Form from './Form';
 import './img/arrow.png';
+import SimpleMenu from './SimpleMenu';
 
 
 
@@ -12,7 +13,7 @@ class App extends Component {
     return (
       <div className = "page">
         <div className = "form-div">
-          <Form />
+          <SimpleMenu />
         </div>
       {/*  <div className="leftStuff">
           <h1 id="leftSideText">Go here to get the punchline!</h1>

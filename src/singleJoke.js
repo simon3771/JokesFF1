@@ -135,6 +135,11 @@ makeArrows(){
 
             <div className = "getJokesButton">
               <div>
+            <Button type = "button" id="blue" variant="outlined"  className="button">
+                  <span role="img" id="fist" aria-label="fist">👊🏼</span>
+                </Button>
+              </div>
+              <div className = "bottomButton">
                 <form onSubmit={this.handleSubmit}>
                   <Button type = "submit" id="red" variant="outlined"  className="button">
                     {this.state.buttonText}
@@ -148,11 +153,7 @@ makeArrows(){
                     <img className ={this.state.arrows} id="arrow5" src="/static/media/white-arr.5270f056.png" alt="arrow" />
                 </div>
               </div>
-              <div>
-            <Button type = "button" id="blue" variant="outlined"  className="button">
-                  <span role="img" id="fist" aria-label="fist">👊🏼</span>
-                </Button>
-              </div>
+
             </div>
 
           </div>

@@ -37,14 +37,14 @@
 .buttonAndArrowsTogether{
   position: fixed;
   align-items: center;
-      bottom: 3rem;
+      bottom: 1rem;
       width: 100%
 }
 
 .getJokesButton{
   display: flex;
-  flex-direction: row;
-  justify-content: space-around;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .getJokesButton Button{
@@ -71,8 +71,12 @@
 
 .jokes li{
   font-size: 50px;
-  padding-bottom: 5rem;
+  /* padding-bottom: 5rem; */
 
+}
+
+.bottomButton{
+  margin-top: 1rem;
 }
 
 /* .jokeDisplay{
