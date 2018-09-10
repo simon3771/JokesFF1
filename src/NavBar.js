@@ -9,6 +9,8 @@ import Home from './index'
 class NavBar extends React.Component{
   render() {
     return (
+      <div>
+
       <BrowserRouter>
         <div id="browserDiv">
           <h1 className = "jokePageLink"><Link id= "jokeLink" to="/Home">Home</Link></h1>
@@ -19,6 +21,7 @@ class NavBar extends React.Component{
           <Route path="/credits" component={ Credits }/>
         </div>
       </BrowserRouter>
+    </div>
 
     )
   }

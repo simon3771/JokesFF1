@@ -4,11 +4,34 @@
   margin-top: 2rem;
 }
 
+.jokesMap{
+  display: flex;
+  flex-direction: column;
+
+}
+
+.punchLineDiv{
+
+  display: flex;
+  justify-content: center;
+}
+
+.punchLine{
+  width: 65%;
+  padding-top: 4rem;
+  font-weight: bolder;
+  margin: 0 auto;
+}
+
 .alljokes{
 
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
+}
+
+.arrows{
+  padding-top: 1rem;
 }
 
 .buttonAndArrowsTogether{
@@ -18,11 +41,22 @@
       width: 100%
 }
 
+.getJokesButton{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.getJokesButton Button{
+
+}
+
 .jokeView{
   width: 75%;
   display: flex;
   margin: 0 auto;
   align-items: center;
+  justify-content: center;
 }
 
 #red {
@@ -30,8 +64,14 @@
   border: 1px solid white;
 }
 
+#blue{
+  color: white;
+  border: 1px solid white;
+}
+
 .jokes li{
   font-size: 50px;
+  padding-bottom: 5rem;
 
 }
 
@@ -61,6 +101,9 @@ animation-play-state: running;
     to {background-color: red;}
 }
 
+#fist{
+  font-size: 2rem;
+}
 
 .flash:hover {
    animation-name: flash;
@@ -100,6 +143,8 @@ img.arrowOn{
   width: 20px;
   -webkit-filter: invert(100%);
 }
+
+
 
 #arrow1 {
 transform: rotate(.2turn);

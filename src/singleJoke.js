@@ -5,7 +5,6 @@ import Button from '@material-ui/core/Button';
 import './css/singleJoke.css'
 import './img/white-arr.png'
 
-
 const styles = theme => ({
   button: {
     margin: theme.spacing.unit,
@@ -24,10 +23,20 @@ class SingleJoke extends React.Component {
       activateLasers: 0,
       laserStatus: 'inactive',
       buttonText: 'Get New Joke',
-      arrows: 'off'
+      arrows: 'off',
+      punchLine: 'punchLineOff'
     }
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.test = this.test.bind(this)
   }
+
+test(e){
+  console.log(e)
+  e.stopPropagation();
+  console.log(e)
+  this.setState({punchLine: 'punchLineOn'})
+  console.log(this.state.punchLine)
+}
 
   componentDidMount(){
     axios.get(`https://08ad1pao69.execute-api.us-east-1.amazonaws.com/dev/random_ten`)
@@ -43,8 +52,9 @@ class SingleJoke extends React.Component {
     axios.get(`https://08ad1pao69.execute-api.us-east-1.amazonaws.com/dev/random_ten`)
       .then((res) => {
         let joke = res.data;
-        this.setState( { activateLasers: this.state.activateLasers + 1, joke} )
+        this.setState( { activateLasers: this.state.activateLasers + 1, joke, punchLine: 'punchLineOff'} )
         console.log(this.state.activateLasers)
+        console.log(this.state.punchLine)
         if((this.state.activateLasers +1) % 5 === 0){
           this.setState( {buttonText: 'Activate Lasers', arrows: 'arrowOn'} )
         }
@@ -56,18 +66,23 @@ class SingleJoke extends React.Component {
         else{ this.setState( {laserStatus: 'inactive'} )}
   })
 
-
-
 }
+
+
+
+
+
 
 moneyBagsFilter(){
   let type = this.props.money
   return this.state.joke.filter(j => {
     return type === j.type}).map(j => {
        let something =
-       <div>
+       <div className = "jokesMap">
          <li key = {j.id}>{j.setup}</li>
-         <li className = "punchLine flash">{j.punchline}</li>
+         <div className = "punchLineDiv">
+           <li className = "punchLine flash">{j.punchline}</li>
+         </div>
        </div>
        return something
      })
@@ -117,20 +132,29 @@ makeArrows(){
 
 {/*This div encompasses the Get New Jokes button and the disappearing arrows that follow*/}
           <div className = "buttonAndArrowsTogether">
+
             <div className = "getJokesButton">
-              <form onSubmit={this.handleSubmit}>
-                <Button type = "submit" id="red" variant="outlined"  className="button">
-                  {this.state.buttonText}
+              <div>
+                <form onSubmit={this.handleSubmit}>
+                  <Button type = "submit" id="red" variant="outlined"  className="button">
+                    {this.state.buttonText}
+                  </Button>
+                </form>
+                <div className = "arrows">
+                    <img className ={this.state.arrows} id="arrow1" src="/static/media/white-arr.5270f056.png" alt="arrow"/>
+                    <img className ={this.state.arrows} id="arrow2" src="/static/media/white-arr.5270f056.png" alt="arrow" />
+                    <img className ={this.state.arrows} id="arrow3" src="/static/media/white-arr.5270f056.png" alt="arrow" />
+                    <img className ={this.state.arrows} id="arrow4" src="/static/media/white-arr.5270f056.png" alt="arrow" />
+                    <img className ={this.state.arrows} id="arrow5" src="/static/media/white-arr.5270f056.png" alt="arrow" />
+                </div>
+              </div>
+              <div>
+            <Button type = "button" id="blue" variant="outlined"  className="button">
+                  <span role="img" id="fist" aria-label="fist">👊🏼</span>
                 </Button>
-              </form>
+              </div>
             </div>
-            <div className = "arrows">
-          <img className ={this.state.arrows} id="arrow1" src="/static/media/white-arr.5270f056.png" alt="arrow"/>
-          <img className ={this.state.arrows} id="arrow2" src="/static/media/white-arr.5270f056.png" alt="arrow" />
-          <img className ={this.state.arrows} id="arrow3" src="/static/media/white-arr.5270f056.png" alt="arrow" />
-          <img className ={this.state.arrows} id="arrow4" src="/static/media/white-arr.5270f056.png" alt="arrow" />
-          <img className ={this.state.arrows} id="arrow5" src="/static/media/white-arr.5270f056.png" alt="arrow" />
-        </div>
+
           </div>
 
 

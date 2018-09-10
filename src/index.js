@@ -1,8 +1,5 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './App';
-import Credits from './Credits';
-import { BrowserRouter, Route, Link } from 'react-router-dom';
 import './css/home.css';
 import Favicon from 'react-favicon';
 import './img/favicon.ico';
