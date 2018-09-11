@@ -4,6 +4,7 @@ import App from './App';
 import Credits from './Credits';
 import './css/home.css';
 import Home from './index'
+import DardoApp from './dardo-components/dardoapp';
 
 
 class NavBar extends React.Component{
@@ -13,11 +14,13 @@ class NavBar extends React.Component{
 
       <BrowserRouter>
         <div id="browserDiv">
-          <h1 className = "jokePageLink"><Link id= "jokeLink" to="/Home">Home</Link></h1>
+          <h1 className = "jokePageLink"><Link id= "jokeLink" to="/">Home</Link></h1>
           <h1 className = "jokePageLink"><Link id= "jokeLink" to="/jokes">Jokes</Link></h1>
+          <h1 className = "jokePageLink"><Link id= "jokeLink" to="/dogs">Dogs</Link></h1>
           <h1 className = "jokePageLink"><Link id= "jokeLink" to="/credits">Credits</Link></h1>
-          <Route path="/Home" component={ Home }/>
+          <Route exact path="/" component={ Home }/>
           <Route path="/jokes/" component={ App }/>
+          <Route path="/dogs/" component={ DardoApp }/>
           <Route path="/credits" component={ Credits }/>
         </div>
       </BrowserRouter>

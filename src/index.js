@@ -13,7 +13,6 @@ export default class Home extends React.Component{
       // your code goes here
       <div >
         <Favicon url="/static/media/favicon.54d4bcf7.ico" />
-
         <div className= "wynJokeContainer">
           <div className = "row">
             <h1 className = "wynJoke">Welcome to WynJoke!</h1>

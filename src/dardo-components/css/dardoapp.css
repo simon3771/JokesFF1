@@ -1,0 +1,34 @@
+
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  display: flex;
+  align-content: center;
+  height: 80px;
+}
+
+.App-header {
+  background-color: #222;
+  height: 150px;
+  padding: 20px;
+  color: white;
+}
+
+.App-title {
+  font-size: 4vw;
+  text-align: center;
+  font-weight: bold;
+  padding: 20px;
+
+  margin: 30px 400px;
+  color: white;
+  background: rgba(237, 109, 82, 1);
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.App-intro {
+  font-size: large;
+}

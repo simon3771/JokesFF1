@@ -14,13 +14,31 @@
 
   display: flex;
   justify-content: center;
+  margin-top: 2rem;
+}
+
+
+
+.punchLineOff{
+  color: #04c2f2;
+  display: block;
+}
+
+.punchLineOn{
+  animation-name: flash;
+   animation-duration: 0.2s;
+   animation-timing-function: linear;
+   animation-iteration-count: infinite;
+   animation-direction: alternate;
+   animation-play-state: running;
+   width: 65%;
+   padding-top: 2rem;
+   font-weight: bolder;
+   margin: 0 auto;
 }
 
 .punchLine{
-  width: 65%;
-  padding-top: 4rem;
-  font-weight: bolder;
-  margin: 0 auto;
+
 }
 
 .alljokes{

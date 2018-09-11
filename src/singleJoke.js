@@ -25,27 +25,33 @@ class SingleJoke extends React.Component {
       buttonText: 'Get New Joke',
       arrows: 'off',
       punchLine: 'punchLineOff',
-      jokingTest: []
+
     }
     this.handleSubmit = this.handleSubmit.bind(this);
     this.showPunch = this.showPunch.bind(this)
   }
 
 showPunch(e){
-  console.log('Show punch xxx', e)
-
+  this.state.punchLine === 'punchLineOff' ? this.setState({punchLine: 'punchLineOn'}) :
+  this.setState({punchLine: 'punchLineOff'})
   //this.setState({punchLine: 'punchLineOff'})
   //this.setState({punchLine: undefined})
   //console.log(this.state.punchLine)
 }
 
   componentDidMount(){
+    // console.log('component did mount!')
     axios.get(`https://08ad1pao69.execute-api.us-east-1.amazonaws.com/dev/random_ten`)
       .then((res) => {
         let joke = res.data;
         this.setState( {joke} );
       })
   }
+
+
+
+
+
 
 
   handleSubmit(e){
@@ -73,14 +79,14 @@ showPunch(e){
 
 moneyBagsFilter(){
   console.log('moneyBagsFilter called')
-  let type = 'general'
+  let type = this.props.money
   return this.state.joke.filter(j => {
     return type === j.type}).map(j => {
        let something =
        <div className = "jokesMap">
          <li key = {j.id}>{j.setup}</li>
          <div className = "punchLineDiv">
-           <li className = "punchLine flash">{j.punchline}</li>
+           <li id='yay' className ={ this.state.punchLine} >{j.punchline}</li>
          </div>
        </div>
        return something
@@ -88,24 +94,23 @@ moneyBagsFilter(){
    }
 
 
+
 chooseOneJoke(){
   let array = this.moneyBagsFilter()
   // console.log(array.length)
-  let randNumb = Math.floor(Math.random() * array.length)
-  let oneJoke = array[randNumb]
+  // let randNumb = Math.floor(Math.random() * array.length)
+  let oneJoke = array[0]
   // console.log(oneJoke)
   return oneJoke
 }
 
-makeArrows(){
-  let arrows = []
-  for(let i=0; i< 6; i++){
-    arrows.push(<img className="invert" id="arrow" src= "/static/media/arrow.d21bae52.png" alt="arrow" />)
-  }
-  return arrows
-}
+
+
+
 
   render(){
+
+
 
     return(
 
@@ -116,7 +121,7 @@ makeArrows(){
 
 //This div encompasses the entire page itself.
       <div className = "entireJokePage">
-        {console.log('rendered singlejoke to page')}
+        {console.log('rendered singlejoke component to page')}
 {/*This div encompasses the Joke display section as well as the hidden message. */}
           <div className = "jokeView" id= {this.state.laserStatus} >
             <div>

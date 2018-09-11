@@ -13,7 +13,7 @@ class SimpleMenu extends React.Component {
   };
 
   handleClick = event => {
-    this.setState({ anchorEl: event.currentTarget, value: '' });
+    this.setState({ anchorEl: event.currentTarget});
   };
 
   handleClose = (event) => {
@@ -30,7 +30,8 @@ class SimpleMenu extends React.Component {
       type = 'programming';
       break;
     default:
-      console.log('This broke!')
+      console.log(`No option selected, setting category to "general"`)
+      type = 'general'
     }
     let newHeader = type.charAt(0).toUpperCase() + type.substr(1)
     this.setState({ anchorEl: null, value: type, pickerText: newHeader })
@@ -41,7 +42,7 @@ class SimpleMenu extends React.Component {
     const { anchorEl } = this.state;
 
     return (
-      <div className = "formDiv">
+      <div id={this.state.hidePunch} className = "formDiv">
         <div>
           <Button id="niceButtonText"
             aria-owns={anchorEl ? 'simple-menu' : null}
@@ -61,7 +62,7 @@ class SimpleMenu extends React.Component {
             <MenuItem value='3' onClick={this.handleClose}>Programming</MenuItem>
           </Menu>
         </div>
-        <SingleJoke money = {this.state.value} />
+        <SingleJoke money = {this.state.value} cash = {this.state.time}/>
       </div>
     );
   }

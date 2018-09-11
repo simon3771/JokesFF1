@@ -1,0 +1,22 @@
+.doggo {
+border: 10px solid white;
+margin: 40px;
+
+}
+
+.textStuff {
+    display: flex ;
+    justify-content: center;
+    background-color: burlywood;
+}
+.dogbutton {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-style: bold;
+    color: white;
+    border: 5px solid white;
+    margin: 40px 40px;
+    white-space: normal;
+    word-wrap: break-word;
+    background-color: darkorange;
+
+}
