@@ -8,8 +8,6 @@ class Dogs extends Component {
         super()
         this.state = {
             dogs: [],
-            show: "show",
-            hidden: "hidden",
             media: ''
         };
         this.gimmehDoggies = this.gimmehDoggies.bind(this)
@@ -28,9 +26,8 @@ class Dogs extends Component {
 
     }
 
-    toggleJoke() {
-        this.setState({ show: "hidden", hidden: "show" })
-    }
+
+
     render() {
 
 
