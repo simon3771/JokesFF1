@@ -51,7 +51,6 @@ class Dogs extends Component {
                 <button className="dogbutton" onClick={this.gimmehDoggies}>
                     Gimmie More Doggies!
                 </button>
-
                 <div className="doggo">{this.state.media}
                 </div>
             </div>

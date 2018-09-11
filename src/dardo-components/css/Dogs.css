@@ -1,12 +1,9 @@
 .doggo {
-border: 6px solid white;
+border: 10px solid white;
 height: 90%;
 width: auto;
-margin: 15px 15px ;
 border-radius: 10px;
-background-color: black;
-
-
+background-color: white;
 
 }
 .doggo img{
@@ -21,25 +18,23 @@ background-color: black;
 }
 
 .textStuff {
-    
     justify-content: center;
     background-color: burlywood;
-    border-radius: 25px;
-    border: 3px solid coral;
+    border-radius: 22px;
+    border: 3.5px solid coral;
     max-width: 1000px;
     min-width: 50%;
-    height: 600px;
+    height: 650px;
 }
 .dogbutton {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-
+    font-size: 12px;
     color: white;
     height: 50px;
     width: 100px;
     border: 3px solid white;
-   
-    background-color: darkorange;
+    background-color:coral;
     border-radius: 5px;
-  
-
+    margin-bottom: 20px;
+    
 }
