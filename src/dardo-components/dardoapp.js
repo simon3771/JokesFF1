@@ -8,7 +8,8 @@ class DardoApp extends Component {
   render() {
     return (
       <div className="page" >
-        <h1 className="App-title">Dogs R Awesome</h1>
+        <h1 className="dogApp-title">Dogs are Awesome</h1>
+        <h2 className="marquee"><span className="marqueespan">Press the Button below for more Dogs</span></h2>
         <Dogs />
       </div>
     );
