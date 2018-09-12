@@ -1,40 +1,93 @@
-.doggo {
-border: 10px solid white;
-height: 90%;
-width: auto;
-border-radius: 10px;
-background-color: white;
-
-}
-.doggo img{
-    object-fit: contain;
-    height: 100%;
-}
-
-.doggo video{
-    object-fit: contain;
-    height: 100%;
-
-}
 
 .textStuff {
     justify-content: center;
     background-color: burlywood;
     border-radius: 22px;
-    border: 3.5px solid coral;
+    border: 3.5px solid tomato;
     max-width: 1000px;
     min-width: 50%;
-    height: 650px;
+    height: 675px;
 }
+.doggo {
+    display: flex;
+    justify-content: center;
+    height: 90%;
+    width: auto;
+    margin: 0px 0px 100px 0px;
+    border: 10px solid white;
+    border-radius: 10px;
+    background-color: white;
+}
+    
+
+    .doggo img{
+        display: flex;
+        object-fit: contain;
+        height: 100%;
+       
+    }
+    
+    .doggo video{
+        object-fit: contain;
+        height: 100%;
+        
+    
+    }
+    
 .dogbutton {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    font-size: 12px;
+    font-size: 1rem;
     color: white;
-    height: 50px;
-    width: 100px;
+    height: 75px;
+    width: 150px;
     border: 3px solid white;
-    background-color:coral;
+    background-color:tomato;
     border-radius: 5px;
     margin-bottom: 20px;
     
 }
+@media screen and (max-width: 375px) {
+    .textStuff {
+    padding: 0px 8px;
+    margin: 0px;
+    object-fit: contain;
+    }
+    .doggo {
+     object-fit: contain;
+     margin: 1px 1px;
+     padding: 1px 1px;
+    }
+    .dogbutton {
+        font-size: .70rem;
+        margin: 5px; 
+    }
+    .doggo video{
+        object-fit: contain;
+        height:100%;
+        max-width: 310px;
+    }
+  }
+
+@media screen and (max-width: 675px) {
+    .textStuff {
+        padding: 0px 2px;
+        margin: 3px;
+    object-fit: contain;
+    }
+    .doggo {
+     object-fit: contain;
+     box-sizing: content-box;
+    }
+    .dogbutton {
+        margin: 2px; 
+        object-fit: contain;
+        
+    }
+    .doggo video{
+        object-fit: contain;
+        height:100%;
+       
+       
+        
+    }
+  }

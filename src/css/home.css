@@ -50,7 +50,9 @@ a {
   background: rgba(237, 109, 82, 1);
 
 }
-
+.smileyFront {
+  margin: 50px ;
+}
 #browserDiv{
 text-align: center;
 order: 3;
