@@ -1,7 +1,8 @@
 
 function isMovie(url) {
+    let movExtensions = ['mp4', 'webm']
     let tokens = url.split('.');
-    return tokens[tokens.length - 1] === 'mp4'
+    return movExtensions.includes(tokens[tokens.length - 1])
 }
 
 export default isMovie
